@@ -1,1 +1,1 @@
-Test
+print("Utviklingsmiljøet er klart!")

@@ -1,1 +1,0 @@
-print("Utviklingsmiljøet er klart!")

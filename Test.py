@@ -1,0 +1,1 @@
+print("Utviklingsmiljøet er klart!")

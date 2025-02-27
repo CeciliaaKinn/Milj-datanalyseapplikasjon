@@ -14,7 +14,7 @@ if response.status_code == 200:
 else:
     print(f"Feil: {response.status_code}")
 
-
+##
 
 # Bruke pandas data frame for å lage en tabell med data 
 

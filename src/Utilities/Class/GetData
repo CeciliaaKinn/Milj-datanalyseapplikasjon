@@ -1,5 +1,6 @@
 import requests
 import pandas as pd
+import ForecastClient
 
 class GetData:
     def __init__(self, api_url):
@@ -14,8 +15,11 @@ class GetData:
             print(f"Error: {e}")
             return None
 
-    def get_wave_data(self):
-        data = self.get_data()
-        if data:
-            return pd.DataFrame(data)  # Converting to DataFrame
-        return None
+
+client = ForecastClient()
+print(client.getWindSpeed("2010-04-01", "2010-04-04"))
+    #def get_wave_data(self):
+    #    data = self.get_data()
+    #    if data:
+    #        return pd.DataFrame(data)  # Converting to DataFrame
+    #    return None

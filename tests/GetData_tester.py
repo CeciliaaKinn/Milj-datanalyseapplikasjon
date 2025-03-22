@@ -22,10 +22,8 @@ referencetime = '2010-01-01/2010-12-31'  # Example
 # Get the data in JSON format
 json_data = data_fetcher.get_json_data(elements, referencetime)
 
-## # Get the data in CSV format
-## data_fetcher.get_csv_data(elements, referencetime)
-
 # Display the monthly averages or sums for the requested elements
-
 data_fetcher.display_monthly_avg_json(elements, referencetime)
 
+## # Get the data in CSV format
+## data_fetcher.get_csv_data(elements, referencetime)

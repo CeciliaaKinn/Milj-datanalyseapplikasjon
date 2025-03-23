@@ -1,2 +1,2 @@
-import src.FrostClient as FrostClient
+import src.Utilities.Class.FrostClient as FrostClient
 

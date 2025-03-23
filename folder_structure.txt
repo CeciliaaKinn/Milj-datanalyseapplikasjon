@@ -1,0 +1,36 @@
+weather_forecast_analysis/ # Do not need to change. Just a suggestion on a more descriptive name of what to analyze
+│
+├── src/  
+│   ├── __init__.py
+│   ├── config.json # Where location, time interval etc is stored
+│   ├── services/ 
+│   │   ├── __init__.py
+│   │   ├── FrostClient.py
+│   │   ├── DataProcessingBase.py # the shared logic between the processing classes
+│   │   ├── WindSpeedProcessing.py # Use Frost client to get data from API, Use file_manager to sava data
+│   │   └── AirTemperatureProcessing.py # Use Frost client to get data from API, Use file_manager to sava data
+│   ├── storage/ 
+│   │   ├── __init__.py
+│   │   └── file_manager.py # To sava and load csv/json files
+│   ├── visualization/  
+│   │   ├── __init__.py
+│   │   ├── WindSpeedVisualizer.py # Use load from file_manager to load the data
+│   │   └── WindSpeedVisualizer.py # Use load from file_manager to load the data
+│   └── main.py 
+│
+├── tests/ # Unit and integration tests
+│   ├── __init__.py
+│   ├── WindSpeedProcessing_tester.py
+│   ├── AirTemperatureProcessing_tester.py
+│   └── .... # All files that is likely to fail, and can be smart to test.
+│
+├── data/ # Stored data files
+│   ├── wind_speed/ # csv file for the data
+│   ├── air_temperature/
+│   └── ...
+│
+├── .env # In .gitignore. Here we store password etc
+├── .example.env # Do not contain the password but the structure of .env
+├── requirements.txt # Project dependencies (packages)
+├── README.md # Project overview
+└── .gitignore # Ignores client id and client credentials from .env. It also contains everything from the data folder.
